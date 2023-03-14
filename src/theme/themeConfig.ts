@@ -9,7 +9,7 @@ export const primary = '#8AC43A';
 export const error = '#FF7171';
 
 // Цвета текста
-export const textGray = '#392413';
+export const textGray = '#212121';
 
 const themeConfig = {
   colors: {

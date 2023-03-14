@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import ScreensAuthHowWork from 'screens/auth/HowWork';
 import ScreensAuthIndex from 'screens/auth/Index';
 
 import { RootStackNavigationParamList } from 'models/Screens';
@@ -22,7 +23,9 @@ const AppNavigator = (): ReactElement => {
         <RootStack.Screen name='ScreensAuthIndex'
                           component={ScreensAuthIndex}
                           options={{ headerShown: false }} />
-
+        <RootStack.Screen name='ScreensAuthHowWork'
+                          component={ScreensAuthHowWork}
+                          options={{ headerShown: false }} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

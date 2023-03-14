@@ -3,11 +3,11 @@ import React, { ReactElement, useState } from 'react';
 import * as EmailValidator from 'email-validator';
 import { Box, Center, Text } from 'native-base';
 import parsePhoneNumber from 'libphonenumber-js';
+import { useNavigation } from '@react-navigation/native';
 
 import ButtonsBlock from 'helpers/ButtonsBlock';
 import CustomInput from 'helpers/Input';
 import Layout from 'helpers/Layout';
-import { useNavigation } from '@react-navigation/native';
 
 import { ScreensAuthIndexNavigationProps } from 'models/Screens';
 
@@ -65,7 +65,7 @@ const ScreensAuthIndex = (): ReactElement => {
     return isValidEmail;
   };
 
-  // Переход на этап регистрации с вводом типа работы +    сохранение введенных данных
+  // Переход на этап регистрации с вводом типа работы + сохранение введенных данных
   const openHowWorkScreen = () => {
     const { isValidPhone, phoneFormat } = phoneCheck();
     const isValidEmail = emailCheck();
