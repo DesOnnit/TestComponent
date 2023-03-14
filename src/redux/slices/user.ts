@@ -6,6 +6,9 @@ interface UserInterface {
   employment: string, // Вид занятости пользователя
   companyName?: string, // Название компании
   personResponsible?: string // Информация об ответственном лице
+  userSurname?: string, // Фамилия пользователя
+  userName?: string, // Имя пользователя
+  userMiddleName?: string // Отчество пользователя
 }
 
 // Первоначальные данные текущего пользователя

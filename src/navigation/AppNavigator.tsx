@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import ScreensAuthAboutYou from 'screens/auth/AboutYou';
 import ScreensAuthAboutСompany from 'screens/auth/AboutСompany';
 import ScreensAuthHowWork from 'screens/auth/HowWork';
 import ScreensAuthIndex from 'screens/auth/Index';
@@ -30,7 +31,9 @@ const AppNavigator = (): ReactElement => {
         <RootStack.Screen name='ScreensAuthAboutСompany'
                           component={ScreensAuthAboutСompany}
                           options={{ headerShown: false }} />
-
+        <RootStack.Screen name='ScreensAuthAboutYou'
+                          component={ScreensAuthAboutYou}
+                          options={{ headerShown: false }} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
