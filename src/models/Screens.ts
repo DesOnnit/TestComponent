@@ -4,6 +4,7 @@ import type { StackScreenProps } from '@react-navigation/stack';
 export type RootStackNavigationParamList = {
   ScreensAuthIndex: undefined;
   ScreensAuthHowWork: undefined;
+  ScreensAuthAboutСompany: undefined;
 };
 
 // Тип параметров экрана первого шага регистрации

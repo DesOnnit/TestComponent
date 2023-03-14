@@ -11,7 +11,7 @@ interface PropsInterface {
 const ButtonsBlock = ({ mainButtonFunction, sideButtonFunction }: PropsInterface): ReactElement => {
   // Вывод основного контента
   const renderContent = () => (
-    <Box w='full' px={4}>
+    <Box w='full' px={4} mb={10}>
       <Button onPress={mainButtonFunction} h={12} borderRadius={8} bg='primary'>
         <Text fontSize='lg' color='light' fontWeight='semibold'>Продолжить</Text>
       </Button>

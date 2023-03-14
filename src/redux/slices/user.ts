@@ -3,7 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 interface UserInterface {
   email: string, // Email пользователя
   phone: string, // Телефон пользователя
-  employment: string // Вид занятости пользователя
+  employment: string, // Вид занятости пользователя
+  companyName?: string, // Название компании
+  personResponsible?: string // Информация об ответственном лице
 }
 
 // Первоначальные данные текущего пользователя
