@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface UserInterface {
+  email: string, // Email пользователя
+  phone: string // Телефон пользователя
+}
+
 // Первоначальные данные текущего пользователя
-const initialState = {};
+const initialState = {} as UserInterface;
 
 // Функция Redux Toolkit для создания отдельных функций, работающих с данными текущего пользователя
 export const userSlice = createSlice({
