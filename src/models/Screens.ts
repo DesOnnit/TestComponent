@@ -6,6 +6,7 @@ export type RootStackNavigationParamList = {
   ScreensAuthHowWork: undefined;
   ScreensAuthAboutСompany: undefined;
   ScreensAuthAboutYou: undefined;
+  ScreensAuthProvideServices: undefined;
 };
 
 // Тип параметров экрана первого шага регистрации

@@ -7,6 +7,7 @@ import ScreensAuthAboutYou from 'screens/auth/AboutYou';
 import ScreensAuthAboutСompany from 'screens/auth/AboutСompany';
 import ScreensAuthHowWork from 'screens/auth/HowWork';
 import ScreensAuthIndex from 'screens/auth/Index';
+import ScreensAuthProvideServices from 'screens/auth/ProvideServices';
 
 import { RootStackNavigationParamList } from 'models/Screens';
 
@@ -33,6 +34,9 @@ const AppNavigator = (): ReactElement => {
                           options={{ headerShown: false }} />
         <RootStack.Screen name='ScreensAuthAboutYou'
                           component={ScreensAuthAboutYou}
+                          options={{ headerShown: false }} />
+        <RootStack.Screen name='ScreensAuthProvideServices'
+                          component={ScreensAuthProvideServices}
                           options={{ headerShown: false }} />
       </RootStack.Navigator>
     </NavigationContainer>

@@ -35,7 +35,7 @@ const ScreensAuthAboutYou = (): ReactElement => {
 
   // Переход на этап регистрации с вводом информации об оказании услуг + сохранение введенных данных
   const openProvideServicesScreen = () => {
-    dispatch(updateUser({ userSurname: surname, userName: name, middleName }));
+    dispatch(updateUser({ userSurname: surname, userName: name, userMiddleName: middleName }));
 
     navigate('ScreensAuthProvideServices');
   };
@@ -48,7 +48,7 @@ const ScreensAuthAboutYou = (): ReactElement => {
           <Text fontSize='xl' textAlign='center' color='primary' bold mb={5}>Как Вас зовут?</Text>
 
           <Text fontSize='xs' color='textGray' fontWeight='semibold' mb={5}>
-            Пожалуйста, укажите  Ваши ФИО как в паспорте, это  важно для проверке
+            Пожалуйста, укажите  Ваши ФИО как в паспорте, это  важно для проверки
           </Text>
 
           <CustomInput value={surname}

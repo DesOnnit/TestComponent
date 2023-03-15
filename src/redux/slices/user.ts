@@ -9,6 +9,8 @@ interface UserInterface {
   userSurname?: string, // Фамилия пользователя
   userName?: string, // Имя пользователя
   userMiddleName?: string // Отчество пользователя
+  wayOfServices: string[], // Способы оказания услуги пользователем
+  placeOfServices: string[] // Место оказания услуги пользователем
 }
 
 // Первоначальные данные текущего пользователя
