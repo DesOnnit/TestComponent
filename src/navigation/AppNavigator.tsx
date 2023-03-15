@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import ScreensAuthAboutYou from 'screens/auth/AboutYou';
 import ScreensAuthAboutСompany from 'screens/auth/AboutСompany';
+import ScreensAuthEnteredData from 'screens/auth/EnteredData';
 import ScreensAuthHowWork from 'screens/auth/HowWork';
 import ScreensAuthIndex from 'screens/auth/Index';
 import ScreensAuthProvideServices from 'screens/auth/ProvideServices';
@@ -38,6 +39,10 @@ const AppNavigator = (): ReactElement => {
         <RootStack.Screen name='ScreensAuthProvideServices'
                           component={ScreensAuthProvideServices}
                           options={{ headerShown: false }} />
+        <RootStack.Screen name='ScreensAuthEnteredData'
+                          component={ScreensAuthEnteredData}
+                          options={{ headerShown: false }} />
+
       </RootStack.Navigator>
     </NavigationContainer>
   );

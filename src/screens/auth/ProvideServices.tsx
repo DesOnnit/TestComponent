@@ -33,23 +33,23 @@ const ScreensAuthProvideServices = (): ReactElement => {
       {
         icon: <IconPC />,
         text: 'Работаю удаленно',
-        value: 'remotely'
+        value: 'Работаю удаленно'
       },
       {
         icon: <IconHome />,
         text: 'Принимаю у себя',
-        value: 'myself'
+        value: 'Принимаю у себя'
       },
       {
         icon: <IconCar />,
         text: 'Выезжаю к клиентам',
-        value: 'traveling'
+        value: 'Выезжаю к клиентам'
       }
     ],
     checkboxInfo: [
-      { text: 'Москва', value: 'moscow' },
-      { text: 'Московская область', value: 'moscowRegion' },
-      { text: 'По согласованию', value: 'agreement' }
+      { text: 'Москва', value: 'Москва' },
+      { text: 'Московская область', value: 'Московская область' },
+      { text: 'По согласованию', value: 'По согласованию' }
     ]
   };
 
