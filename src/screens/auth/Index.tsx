@@ -19,7 +19,7 @@ const ScreensAuthIndex = (): ReactElement => {
   const { email: userEmail, phone: userPhone } = useAppSelector(state => state.currentUser);
 
   const [email, setEmail] = useState<string>(userEmail || '');
-  const [phone, setPhone] = useState<string>(userPhone || '');
+  const [phone, setPhone] = useState<string>((userPhone && `8${userPhone}`) || '');
 
   const [emailError, setEmailError] = useState<string>('');
   const [phoneError, setPhoneError] = useState<string>('');

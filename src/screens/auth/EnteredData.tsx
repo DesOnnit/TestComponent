@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import { Box, Center, Text } from 'native-base';
+import { nanoid } from 'nanoid/non-secure';
 import { useNavigation } from '@react-navigation/native';
 
 import ButtonsBlock from 'helpers/ButtonsBlock';
@@ -91,7 +92,7 @@ const ScreensAuthEnteredData = (): ReactElement => {
         <Box>
           <Text fontSize='md' color='primary'>Способ оказания услуг:</Text>
 
-          {wayOfServices.map(elem => (<Text fontSize='xs' textAlign='center' color='black' mt={1}>{elem}</Text>))}
+          {wayOfServices.map(elem => (<Text key={nanoid()} fontSize='xs' textAlign='center' color='black' mt={1}>{elem}</Text>))}
         </Box>
       )}
 
@@ -99,7 +100,7 @@ const ScreensAuthEnteredData = (): ReactElement => {
         <Box>
           <Text fontSize='md' color='primary'>Место оказания услуг:</Text>
 
-          {placeOfServices.map(elem => (<Text fontSize='xs' textAlign='center' color='black' mt={1}>{elem}</Text>))}
+          {placeOfServices.map(el => (<Text key={nanoid()} fontSize='xs' textAlign='center' color='black' mt={1}>{el}</Text>))}
         </Box>
       )}
     </Box>
