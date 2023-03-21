@@ -1,24 +1,16 @@
-export interface TestDataInterface<T> {
-  entity: string,
-  endpoints: T
+export type Method =  'GET' | 'POST';
+
+interface Endpoint {
+  method: Method;
+  url: string;
 }
 
-interface EndpointsInterface<T, U=T>{
-  getVtemplates: T,
-  postVtemplates: U
+interface TestData<T> {
+  entity: string;
+  endpoints: Record<string, T>;
 }
 
-interface GetVtemplatesInterface{
-  method: string,
-  url: string
-}
-
-interface PostVtemplatesInterface {
-  method: number,
-  url: string
-}
-
-const testData: TestDataInterface<EndpointsInterface<GetVtemplatesInterface, PostVtemplatesInterface>> = {
+const testData: TestData<Endpoint> = {
   entity: 'vtemplate',
   endpoints: {
     getVtemplates: {
@@ -26,10 +18,10 @@ const testData: TestDataInterface<EndpointsInterface<GetVtemplatesInterface, Pos
       url: 'vtemplate'
     },
     postVtemplates: {
-      method: 12,
+      method: 'POST',
       url: 'vtemplate'
     }
   }
 };
 
-const { method } = testData.endpoints.postVtemplates;
+const { method } = testData.endpoints.getVtemplates;
