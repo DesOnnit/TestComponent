@@ -1,16 +1,21 @@
-export type Method =  'GET' | 'POST';
+export type Method = 'GET' | 'POST';
 
-interface Endpoint {
+const endpoints = {
+  getVtemplates: 'getVtemplates',
+  postVtemplates: 'postVtemplates'
+} as const;
+
+type Endpoint = {
   method: Method;
   url: string;
-}
+};
 
-interface TestData<T> {
+type TestData<T extends keyof typeof endpoints> = {
   entity: string;
-  endpoints: Record<string, T>;
-}
+  endpoints: Record<T, Endpoint>;
+};
 
-const testData: TestData<Endpoint> = {
+const testData: TestData<keyof typeof endpoints> = {
   entity: 'vtemplate',
   endpoints: {
     getVtemplates: {
@@ -24,4 +29,4 @@ const testData: TestData<Endpoint> = {
   }
 };
 
-const { method } = testData.endpoints.getVtemplates;
+const test = testData.endpoints.getVtemplates.method
